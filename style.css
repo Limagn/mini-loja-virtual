@@ -1,0 +1,239 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
+:root {
+    --primary-color: #FC6722;
+    --light-primary: #FFBE0B;
+    --secundary-color: #000500;
+    --light-secundary: #A5ABAF;
+    --lighest-color: #EBEBEB;
+    --font1: 'Lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font1);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+#body-login {
+    background-color: var(--primary-color);
+}
+
+header {
+    background-color: var(--secundary-color);
+    padding: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#msg {
+    color: var(--lighest-color);
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+main {
+    background-color: var(--lighest-color);
+    min-height: 90dvh;
+    margin: 5px 300px;
+    padding-bottom: 2px;
+}
+
+main > h2 {
+    background-color: var(--light-primary);
+    padding: 6px 0;
+    text-align: center;
+}
+
+form.login-cadastro {
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+    border: #ccc;
+    padding: 30px;
+    box-shadow: 1px 1px 10px var(--secundary-color);
+    background-color: var(--secundary-color);
+    border-radius: 5px;
+    color: var(--light-secundary);
+}
+
+/* input {
+    display: block;
+    margin: 10px auto;
+    height: 30px;
+    border-radius: 5px;
+} */
+
+form > input {
+    display: block;
+    margin: 10px auto;
+    height: 30px;
+    border-radius: 5px;
+    width: 220px;
+}
+
+form > input:focus{
+    background-color: #e0a503;
+}
+
+form.cadastro[name="cadastro"] {
+    background-color: blue;
+}
+
+form > a,
+form > h5 > a {
+    color: var(--light-primary);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+button {
+    all: unset;
+    display: block;
+    padding: 0.3rem;
+    background-color: var(--light-primary);
+    border: 1px solid var(--secundary-color);
+    border-radius: 7px;
+    box-shadow: 1px 1px 2px var(--secundary-color);
+    cursor: pointer;
+    margin: 8px auto;
+}
+
+input[type="button"]{
+    cursor: pointer;
+    font-weight: bold;
+    background-color:  var(--light-primary);
+}
+
+input[type="button"]:hover, 
+button:hover, 
+button[class="remover"]:hover,
+a[class="adicionar"]:hover
+{
+    background-color: #cc9600;
+}
+
+input[value="Logout"] {
+    margin: 0;
+    padding: 3px;
+    display: block;
+    height: 30px;
+    border-radius: 5px;
+}
+
+#produtos {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+}
+
+.produto-single {
+    width: 32%;
+    margin-right: 1%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px var(--secundary-color);
+    margin: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.produto-single > img {
+    max-width: 100%;
+}
+
+.produto-single > p {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    /* font-weight: bold; */
+}
+
+.produto-single > a {
+    text-decoration: none;
+    color: var(--secundary-color);
+    background-color: var(--light-primary);
+    /* padding: 2px; */
+    display: block;
+    font-weight: bold;
+}
+
+#carrinho {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: block;
+}
+
+.produto-carrinho {
+    padding-top: 5px;
+}
+
+.produto-carrinho > p {
+    padding: 2px;
+}
+
+.produto-carrinho > img {
+    width: 6%;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px var(--secundary-color);
+    float: right;
+    margin-top: 11px;
+}
+
+.produto-carrinho > button {
+    margin: 2px 0 8px 0;
+    color: var(--secundary-color);
+    background-color: var(--light-primary);
+    padding: 2px;
+    display: block;
+    justify-content: center;
+}
+
+/* #trash {
+    width: 20px;
+    padding: 1px 2px 0 2px;
+} */
+
+.total {
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 3px var(--secundary-color);
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 180px; 
+    margin: 20px auto 12px auto;
+    padding: 4px;
+}
+
+
+footer {
+    background-color: var(--secundary-color);
+    color: var(--lighest-color);
+    display: block;
+    text-align: center;
+    padding: 6px;
+    font-weight: bold;
+}
+
+
+
+/* @media screen and (max-width: 768px) {
+    .produto-single {
+        width: 100px;
+        margin-right: 0;
+    }   
+} */
+
+button:disabled {
+    color: grey;
+    border-color: grey;
+}

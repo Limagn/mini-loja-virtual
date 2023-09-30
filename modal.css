@@ -1,0 +1,110 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap');
+
+:root {
+    --primary-color: #FC6722;
+    --light-primary: #FFBE0B;
+    --secundary-color: #000500;
+    --light-secundary: #A5ABAF;
+    --lighest-color: #EBEBEB;
+    --font1: 'Lato', sans-serif;
+}
+
+#modal-overlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    visibility: hidden;
+    transition: all 0.2s ease;
+    opacity: 10;
+}
+
+.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal-background {
+    background-color: var(--light-primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#modal-container {
+    z-index: 1;
+    background-color: var(--lighest-color);
+    padding: 1rem 3rem 2rem 3rem;
+    border-radius: 10px;
+}
+
+#modal-body {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0 15px 0;
+}
+
+h3, h4{
+    margin: 10px 0 15px 0;
+}
+
+input, select {
+    height: 30px;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+#cep {
+    width: 65px;
+}
+
+#cepDig {
+    width: 55px;
+    margin-right: 2px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 10px 10px 0;
+}
+
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#credd{
+    padding-top: 15px;
+}
+
+.instrucoes{
+    padding: 5px;
+}
+
+.finalizar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+input.cartao:focus{
+    background-color: #e0a503;
+}
